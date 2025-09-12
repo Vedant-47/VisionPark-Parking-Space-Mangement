@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Parking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Location Header -->
+    <header>
+      <p class="location">📍 NAVRACHNA UNIVERSITY , Vadodara</p>
+      <h2>Find best Parking space</h2>
+    </header>
+
+    <!-- Vehicle Type -->
+    <section class="vehicle-type">
+      <h3>Your Vehicle Type</h3>
+      <div class="vehicle-options">
+        <button class="vehicle" data-type="bike">🏍 Bike</button>
+        <button class="vehicle" data-type="scooty">🛵 Scooty</button>
+        <button class="vehicle" data-type="car">🚗 Car</button>
+      </div>
+    </section>
+
+    <!-- Parking Locations -->
+    <section class="locations">
+      <h3>Available Locations</h3>
+      <div class="location-list">
+        <button class="location-btn" data-place="Basement">Basement</button>
+        <button class="location-btn" data-place="NUV School Ground">NUV School Ground</button>
+        <button class="location-btn" data-place="Viklang Parking">Viklang Parking</button>
+        <button class="location-btn" data-place="Amphitheatre">Amphitheatre</button>
+        <button class="location-btn" data-place="Slope">Slope</button>
+      </div>
+    </section>
+
+    <!-- Video Display -->
+    <section id="video-section" class="video hidden">
+  <h3 id="video-title">Live Parking Slot Detection</h3>
+  <img id="parkingVideo" width="100%" style="border-radius:15px;"/>
+</section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
