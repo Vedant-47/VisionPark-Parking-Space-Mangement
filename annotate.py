@@ -47,7 +47,7 @@ def annotate_video(output_json="slots.json"):
 
     video_path = select_video()
     if not video_path:
-        print("❌ No video selected. Exiting...")
+        print("No video selected. Exiting...")
         return
 
     cap = cv2.VideoCapture(video_path)
@@ -55,14 +55,14 @@ def annotate_video(output_json="slots.json"):
     cap.release()
 
     if not ret:
-        print("❌ Could not read video.")
+        print("Could not read video.")
         return
 
     frame_copy = frame.copy()
     cv2.imshow("Annotator", frame_copy)
     cv2.setMouseCallback("Annotator", draw_rectangle)
 
-    print("➡️ Draw rectangles with LEFT mouse button. Press 'q' to save and exit.")
+    print("Draw rectangles with LEFT mouse button. Press 'q' to save and exit.")
     while True:
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
@@ -70,7 +70,8 @@ def annotate_video(output_json="slots.json"):
     cv2.destroyAllWindows()
     with open(output_json, "w") as f:
         json.dump(annotations, f, indent=4)
-    print(f"✅ Annotations saved to {output_json}")
+    print(f"Annotations saved to {output_json}")
 
 if __name__ == "__main__":
     annotate_video()
+
